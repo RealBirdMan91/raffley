@@ -1,0 +1,11 @@
+<section class="rules">
+  <h1>The Rules</h1>
+  <p>
+    <%= @emojis %>
+  </p>
+  <ol>
+    <%= for rule <- @rules  do %>
+      <li><a href={~p"/rules/#{rule.id}"}><%= rule.text %></a></li>
+    <% end %>
+  </ol>
+</section>
